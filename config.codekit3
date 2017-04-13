@@ -43,15 +43,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/njtest\/server.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/njtest\/server-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/readme.md": {
 		"cS": 0,
 		"eF": 1,
@@ -105,12 +96,6 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
-		},
-	"\/sidebar.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/sidebar.html",
-		"oF": 0
 		},
 	"\/styles\/style-min.css": {
 		"aP": 1,
