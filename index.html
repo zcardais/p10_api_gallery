@@ -5,8 +5,16 @@
   <title>AJAX Spotify Album Gallery</title>
   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/style.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="scripts/script.js"></script>
+  <!-- <script src="scripts/flickr.js"></script> -->
+  <script src="scripts/spotify.js"></script>
+  <script>
+  function sendAJAX() {
+    $("#ajax").load('sidebar.html');
+    $("#load").hide()
+  }
+  </script>
 
 </head>
 <body>
@@ -15,22 +23,25 @@
       <div class="contained">
         <div class="grid-100">
           <div class="heading">
-            <h1>Flickr Photo Feeder</h1>
-            <p>Choose which kind of animal you'd like to return photos of...</p>
+            <h1>Search Spotify</h1>
+            <form id="search-form">
+              <input type="text" id="query" value ="" class="form-control">
+              <input type="submit" id="submit" class="btn btn-primary" value="Search">
+            </form>
           </div>
-          <ul class="filter-select">
-            <li><button>Dog</button></li>
-            <li><button>Cat</button></li>
-            <li><button>Moose</button></li>
-          </ul>
         </div>
+        <div id="results"></div>
 
-        <div id="photos">
+        <div id="photos"></div>
 
-        </div>
+        <div id="ajax"></div>
       </div>
     </div>
   </div>
-
+  <script id="results-template" type="text/x-handlebars-template">
+    {{#each albums.items}}
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
+</script>
 </body>
 </html>
