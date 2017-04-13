@@ -3,18 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>AJAX Spotify Album Gallery</title>
-  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="lightbox2-master/dist/css/lightbox.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="lightbox2-master/dist/js/lightbox.min.js"></script>
   <script src="scripts/spotify.js"></script>
-  <script>
-  function sendAJAX() {
-    $("#ajax").load('sidebar.html');
-    $("#load").hide()
-  }
-  </script>
-
 </head>
 <body>
   <div class="grid-container centered">
@@ -31,14 +26,16 @@
         </div>
 
         <div id="results"></div>
-        
+
       </div>
     </div>
   </div>
   <script id="results-template" type="text/x-handlebars-template">
     {{#each albums.items}}
-    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    <!-- <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" data-lightbox="{{type}}" data-title="{{name}}" class="cover"></div> -->
+    <a href="{{images.0.url}}" data-lightbox="{{type}}" data-title="{{name}}"><img src="{{images.0.url}}" data-album-id="{{id}}" class="cover"></img></a>
     {{/each}}
 </script>
+
 </body>
 </html>
