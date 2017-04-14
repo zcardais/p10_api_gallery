@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>AJAX Spotify Album Gallery</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-min.css">
   <link rel="stylesheet" href="lightbox2-master/dist/css/lightbox.min.css">
   <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
@@ -17,9 +17,9 @@
       <div class="contained">
         <div class="grid-100">
           <div class="heading">
-            <h1>Search Spotify</h1>
+            <h1>Search Spotify: Search for an artist to show their album artwork</h1>
             <form id="search-form">
-              <input type="text" id="query" value ="" class="form-control">
+              <input type="text" id="query" value ="" placeholder="Search for your favorite artist e.g. Prince, Katy Perry, Chumbawamba…" class="form-control">
               <input type="submit" id="submit" class="btn btn-primary" value="Search">
             </form>
           </div>
@@ -32,10 +32,9 @@
   </div>
   <script id="results-template" type="text/x-handlebars-template">
     {{#each albums.items}}
-    <!-- <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" data-lightbox="{{type}}" data-title="{{name}}" class="cover"></div> -->
     <a href="{{images.0.url}}" data-lightbox="{{type}}" data-title="{{name}}"><img src="{{images.0.url}}" data-album-id="{{id}}" class="cover"></img></a>
     {{/each}}
-</script>
+  </script>
 
 </body>
 </html>

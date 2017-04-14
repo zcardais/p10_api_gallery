@@ -363,20 +363,20 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/scripts\/flickr-min.js": {
+	"\/scripts\/ignore\/flickr-min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/scripts\/flickr-min-min.js",
+		"oAP": "\/scripts\/ignore\/flickr-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/scripts\/flickr.js": {
+	"\/scripts\/ignore\/flickr.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/scripts\/flickr-min.js",
+		"oAP": "\/scripts\/ignore\/flickr-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
